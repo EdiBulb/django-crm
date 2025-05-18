@@ -1,18 +1,13 @@
-<head>
-    <style>
-        .세일{
-            padding-top: 20px;
-            padding-bottom: 30px;
-            padding-right: 10px;
-            padding-left: 10px;
-            background-color: #f5f5f5;
-        }
-    </style>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block content %}
+    <a href="{% url '홈페이지:목록' %}"> 목록으로 돌아가기</a>
     <h1>이것이 {{사람키.first_name}}고객님의 나이 정보입니다.</h1>
     <p>이 분의 나이는 {{사람키.age}} 입니다.</p>
 
-        <p>영업 실적을 올린 직원은{{사람키.person}} 입니다.</p>
+    <p>영업 실적을 올린 직원은{{사람키.person}} 입니다.</p>
 
-</body>
+    <a href="{% url '홈페이지:업뎃' 사람키.pk %}">업데이트</a>
+    <a href="{% url '홈페이지:지우기' 사람키.pk %}">지우기</a>
+
+{% endblock content %}

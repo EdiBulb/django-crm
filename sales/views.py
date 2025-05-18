@@ -7,6 +7,10 @@ from .forms import SaleForm, SaleModelForm
 # Create your views here.
 # 브라우저에 어떤것을 보여줄것인가
 # 함수로 원하는 페이지를 만들 수 있다.그리고 이걸 urls.py에 등록하면 이 함수가 보여주는 페이지로 이동한다.
+
+def 첫화면(request):
+    return render(request, "첫화면.html")
+
 def 세일목록(request):
     사람 = Sale.objects.all()
     context = {

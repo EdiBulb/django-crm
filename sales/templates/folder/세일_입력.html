@@ -1,0 +1,12 @@
+<head>
+   
+</head>
+<body>
+    <p>세일을 입력해주세요..</p>
+    <p></p>
+    <form method="post" >
+        {% csrf_token %}
+        {{폼키.as_p}}
+        <button type = "submit">전송</button>
+    </form>
+</body>

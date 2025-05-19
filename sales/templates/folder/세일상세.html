@@ -6,47 +6,30 @@
   <div class="container px-5 py-24 mx-auto">
     <div class="lg:w-4/5 mx-auto flex flex-wrap">
       <div class="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
-        <h2 class="text-sm title-font text-gray-500 tracking-widest">{{사람키.last_name}} {{사람키.first_name}}</h2>
-        <h1 class="text-white text-3xl title-font font-medium mb-4">Animated Night Hill Illustrations</h1>
-        <div class="flex mb-4">
-          <a class="flex-grow text-indigo-400 border-b-2 border-indigo-500 py-2 text-lg px-1">Description</a>
-          <a class="flex-grow border-b-2 border-gray-800 py-2 text-lg px-1">Reviews</a>
-          <a class="flex-grow border-b-2 border-gray-800 py-2 text-lg px-1">Details</a>
+        <h1 class="text-white text-3xl title-font font-medium mb-4">{{사람키.last_name}} {{사람키.first_name}}</h1>
+        <div class="flex mb-11">
+          <a class="flex-grow text-indigo-400 border-b-2 border-indigo-500 py-2 text-lg px-1">고객정보</a>
+          <a class="flex-grow border-b-2 border-gray-800 py-2 text-lg px-1">평가</a>
+          <a href="{% url '홈페이지:업뎃' 사람키.pk %}" class="flex-grow border-b-2 border-gray-800 py-2 text-lg px-1">정보수정</a>
         </div>
-        <p class="leading-relaxed mb-4">Fam locavore kickstarter distillery. Mixtape chillwave tumeric sriracha taximy chia microdosing tilde DIY. XOXO fam iligo juiceramps cornhole raw denim forage brooklyn. Everyday carry +1 seitan poutine tumeric. Gastropub blue bottle austin listicle pour-over, neutra jean.</p>
+        <p class="leading-relaxed mb-4">짜장면을 좋아하시는 여러가지 문제를 연구하는 연구소 소장님 .</p>
         <div class="flex border-t border-gray-800 py-2">
           <span class="text-gray-500">나이</span>
           <span class="ml-auto text-white">{{사람키.age}}</span>
         </div>
         <div class="flex border-t border-gray-800 py-2">
-          <span class="text-gray-500">Size</span>
-          <span class="ml-auto text-white">Medium</span>
+          <span class="text-gray-500">지역</span>
+          <span class="ml-auto text-white">강원남도</span>
         </div>
         <div class="flex border-t border-b mb-6 border-gray-800 py-2">
-          <span class="text-gray-500">Quantity</span>
-          <span class="ml-auto text-white">4</span>
+          <span class="text-gray-500">연락처</span>
+          <span class="ml-auto text-white">123445656</span>
         </div>
-        <div class="flex">
-          <span class="title-font font-medium text-2xl text-white">$58.00</span>
-          <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Button</button>
-          <button class="rounded-full w-10 h-10 bg-gray-800 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
-            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-              <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path>
-            </svg>
-          </button>
-        </div>
+        
       </div>
       <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="https://dummyimage.com/400x400">
     </div>
   </div>
 </section>
-    <a href="{% url '홈페이지:목록' %}"> 목록으로 돌아가기</a>
-    <h1>이것이 {{사람키.first_name}}고객님의 나이 정보입니다.</h1>
-    <p>이 분의 나이는 {{사람키.age}} 입니다.</p>
-
-    <p>영업 실적을 올린 직원은{{사람키.person}} 입니다.</p>
-
-    <a href="{% url '홈페이지:업뎃' 사람키.pk %}">업데이트</a>
-    <a href="{% url '홈페이지:지우기' 사람키.pk %}">지우기</a>
-
+    
 {% endblock content %}

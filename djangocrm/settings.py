@@ -123,3 +123,5 @@ AUTH_USER_MODEL = 'sales.아이디' # 모델 등록
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_REDIRECT_URL = "/홈페이지"
